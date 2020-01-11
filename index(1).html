@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Quoridor_Style.css">
+    <title>Quoridor</title>
+</head>
+<body>
+  <h1>quoridor</h1>
+  <a href="game_rules.html">how to play</a>
+      <table>
+          <tr id="white_pawn_row">
+            <td class="r1 c1" ondragover="allowDrop(event)" ondrop="drop(event)"></td>   <!-- class = row number & column number -->
+            <td class="r1 c2" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r1 c3" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r1 c4" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r1 c5" ondragover="allowDrop(event)" ondrop="drop(event)"><div id="white_pawn" draggable="true" ondragstart="dragStart(event)"></div></td>
+            <td class="r1 c6" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r1 c7" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r1 c8" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r1 c9" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+          </tr>
+
+          <tr>
+            <td class="r2 c1" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r2 c2" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r2 c3" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r2 c4" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r2 c5" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r2 c6" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r2 c7" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r2 c8" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r2 c9" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+          </tr>
+
+          <tr>
+            <td class="r3 c1" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r3 c2" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r3 c3" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r3 c4" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r3 c5" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r3 c6" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r3 c7" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r3 c8" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r3 c9" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+          </tr>
+
+          <tr>
+            <td class="r4 c1" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r4 c2" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r4 c3" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r4 c4" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r4 c5" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r4 c6" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r4 c7" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r4 c8" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r4 c9" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+          </tr>
+
+          <tr>
+            <td class="r5 c1" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r5 c2" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r5 c3" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r5 c4" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r5 c5" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r5 c6" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r5 c7" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r5 c8" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r5 c9" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+          </tr>
+
+          <tr>
+            <td class="r6 c1" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r6 c2" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r6 c3" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r6 c4" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r6 c5" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r6 c6" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r6 c7" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r6 c8" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r6 c9" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+          </tr>
+
+          <tr>
+            <td class="r7 c1" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r7 c2" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r7 c3" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r7 c4" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r7 c5" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r7 c6" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r7 c7" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r7 c8" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r7 c9" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+          </tr>
+
+          <tr>
+            <td class="r8 c1" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r8 c2" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r8 c3" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r8 c4" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r8 c5" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r8 c6" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r8 c7" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r8 c8" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r8 c9" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+          </tr>
+
+          <tr id="yellow_pawn_row">
+            <td class="r9 c1" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r9 c2" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r9 c3" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r9 c4" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r9 c5" ondragover="allowDrop(event)" ondrop="drop(event)"><div id="yellow_pawn" draggable="true" ondragstart="dragStart(event)"></div></td>
+            <td class="r9 c6" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r9 c7" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r9 c8" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+            <td class="r9 c9" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+          </tr>
+      </table>
+
+      <div id="player_status">    
+        <div id="player1">
+          <div id="vertical" draggable="true" ondragstart="dragStart(event)"></div>
+          <div id="horizontal" draggable="true" ondragstart="dragStart(event)"></div>
+          <p id="wall_status_p1">walls left<br><span id="num_of_walls_p1">10</span></p>
+        </div>
+
+        <div id="player2">
+          <p id="wall_status_p2">walls left<br><span id="num_of_walls_p2">10</span></p>
+          <div id="horizontal2" draggable="true" ondragstart="dragStart(event)"></div>
+          <div id="vertical2" draggable="true" ondragstart="dragStart(event)"></div>
+        </div>
+      </div>
+
+<script src="scripts/QuoridorLogic.js"></script>
+
+<script src="scripts/DragDropTouch.js"></script>      <!-- Enables drag and drop for mobile devices. Script not made by me. -->
+                                                      <!-- Demo:  http://bernardo-castilho.github.io/DragDropTouch/demo/ -->  
+</body>
+</html>

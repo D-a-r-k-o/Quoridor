@@ -1,0 +1,151 @@
+body {
+    background-color: #413f40;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    touch-action: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 200;
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(221, 148, 58);
+    margin-top: 6px;
+    margin-bottom: 7px;
+}
+
+a {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    background-color: #413f40;
+    border: 1px solid green;
+}
+
+#white_pawn, #yellow_pawn {
+    margin: auto;
+    width: 65%;
+    height: 65%;
+    border-radius: 50%;
+}
+
+#white_pawn {
+    background-color: white;
+}
+
+#yellow_pawn {
+    background-color: yellow;
+}
+
+#player_status {
+    display: flex;
+}
+
+#player1, #player2 {
+    font-family: 'Orbitron', sans-serif;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#player1 {
+    color: white;
+    margin-left: 5px;
+}
+
+#player2 {
+    color: yellow;
+    margin-right: 5px;
+}
+
+#horizontal {
+    margin-left: 32px;
+    margin-right: 14px;
+    background: url(images/h_wall_white.png);
+}
+
+#horizontal2 {
+    margin-left: 14px;
+    margin-right: 32px;
+    background: url(images/h_wall_yellow.png);
+}
+
+#vertical {
+    background: url(images/v_wall_white.png);
+}
+
+#vertical2 {
+    background: url(images/v_wall_yellow.png);
+}
+
+#horizontal, #horizontal2, #vertical, #vertical2 {
+    background-repeat: no-repeat;
+    background-position: center center;  
+}
+
+p {
+    text-align: center;
+}
+
+@media (orientation: portrait) {
+    td {
+        width: 11vw;
+        height: 11vw;
+    }
+    #horizontal, #horizontal2, #vertical, #vertical2 {
+        width: 10vw;
+        height: 10vw;
+    }
+    #player_status {
+        font-size: 13px;    
+    }
+    #player1 {
+        margin-right: 30px;    
+    }
+}
+
+@media (orientation: landscape) {
+    body {
+        flex-direction: column-reverse;
+        overflow: hidden;
+    }
+    h1 {
+        margin-top: 0;
+    }
+    td {
+        width: 7.6vh;
+        height: 7.6vh;
+    }
+    #horizontal, #horizontal2, #vertical, #vertical2 {
+        width: 7.6vh;
+        height: 7.6vh;
+    }
+    #player1 {
+        margin-right: 30px;    
+    }
+    #player1, #player2 {
+        padding: 0;    
+    }
+    #player_status {
+        height: 16vh;    
+    }
+}
+
+@media (max-height: 595px) and (orientation: landscape) {
+    h1 {
+        display: none;    
+    }
+}
